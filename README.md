@@ -86,5 +86,11 @@ mode: single
 ```
 Thanks to [@MathiasVandePol](https://github.com/MathiasVandePol) for the sample.
 
+# Node-RED Integration
+
+Looking for more advanced automation with Node-RED? Check out [@v12345vtm's Node-RED flow](https://github.com/v12345vtm/HomeAssistant-RecycleApp/tree/main/nodered) that provides a template-based approach to send RecycleApp data to MQTT or other services.
+
+The flow offers a flexible way to process and distribute your waste collection data throughout your home automation setup.
+
 ## Bug, ideas?
 If some collections are missing, you find a bug or have enhancement ideas don't hesitate to open an [issue](https://github.com/olibos/HomeAssistant-RecycleApp/issues/new).

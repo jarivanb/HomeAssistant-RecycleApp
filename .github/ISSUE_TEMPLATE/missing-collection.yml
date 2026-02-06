@@ -1,0 +1,101 @@
+name: Missing Collection
+description: Report a collection type that's not showing up in Home Assistant but is visible in RecycleApp
+title: "[Missing Collection]: "
+labels: ["bug", "missing-collection"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this issue! Please fill out the information below to help me investigate.
+        
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification Checklist
+      description: Please verify the following before submitting
+      options:
+        - label: The collection is visible on the [RecycleApp website](https://recycleapp.be/)
+          required: true
+        - label: I have restarted Home Assistant after installing/updating the integration
+          required: true
+
+  - type: textarea
+    id: collection-details
+    attributes:
+      label: Collection Details
+      description: What collection type is missing?
+      placeholder: "e.g., GFT, PMD, Glass, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: recycleapp-screenshot
+    attributes:
+      label: RecycleApp Website Screenshot
+      description: Please provide a screenshot showing the collection is visible on recycleapp.be
+      placeholder: Drag and drop an image here or click to upload
+    validations:
+      required: true
+
+  - type: input
+    id: nearby-address
+    attributes:
+      label: Nearby Address for Testing
+      description: Provide a nearby address (not your exact address) so I can check the API results
+      placeholder: "e.g., Street Name 1, 1000 Brussels"
+    validations:
+      required: true
+
+  - type: input
+    id: postal-code
+    attributes:
+      label: Postal Code
+      description: What is your postal code?
+      placeholder: "e.g., 1000"
+    validations:
+      required: true
+
+  - type: input
+    id: ha-version
+    attributes:
+      label: Home Assistant Version
+      description: What version of Home Assistant are you running?
+      placeholder: "e.g., 2026.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: integration-version
+    attributes:
+      label: Integration Version
+      description: What version of the RecycleApp integration are you using?
+      placeholder: "e.g., v2.8.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: installation-method
+    attributes:
+      label: Installation Method
+      description: How did you install the integration?
+      options:
+        - HACS
+        - Manual installation
+    validations:
+      required: true
+
+  - type: textarea
+    id: ha-logs
+    attributes:
+      label: Home Assistant Logs
+      description: Please provide any relevant logs from Home Assistant (Settings > System > Logs)
+      render: shell
+      placeholder: |
+        Paste relevant log entries here
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here
+      placeholder: Any additional information that might help me investigate
